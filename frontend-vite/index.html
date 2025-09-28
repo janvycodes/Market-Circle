@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lobster&family=Story+Script&display=swap" 
+    rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>market-circle</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-light bg-light shadow-sm sticky-top">
+        <div class="container-fluid px-3 d-flex align-items-center">
+            <button class="btn text-success me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+
+            <a href="index.html" class="navbar-brand fw-bold text-success"> <i class="bi bi-cart3"></i> MC</a>
+
+            <form class="d-none d-lg-flex flex-grow-1 mx-4 position-relative">
+                <input type="search" class="form-control pe-5" placeholder="Search product...">
+                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+            </form>
+           
+           <div class="d-flex ms-auto align-items-center">
+                <a href="#" class="nav-link account fs-4 me-2"><i class="bi bi-person"></i></a>
+                <a href="#" class="nav-link d-none d-lg-inline wishlist fs-4 me-2"><i class="bi bi-heart"></i></a>
+                <a href="#" class="nav-link d-none d-lg-inline cart fs-4"><i class="bi bi-cart"></i></a>
+           </div> 
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" id="mobileMenu" tabindex="-1">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-success fw-bold"><i class="bi bi-cart-check me-1"></i> Market Circle</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form action="" class="d-flex mb-3 position-relative">
+                <input type="search" class="form-control pe-5" placeholder="Search products...">
+                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+            </form>
+
+            <ul class="list-unstyled">
+                <li><a href="" class="d-flex align-items-center py-2"><i class="bi bi-person me-2"></i> Account</a></li>
+                <li><a href="#" class="d-flex align-items-center py-2"><i class="bi bi-cart me-2"></i> Cart</a></li>
+                <li><a href="#" class="d-flex align-items-center py-2"><i class="bi bi-bag-check me-2"></i> Checkout</a></li>
+                <li><a href="#" class="d-flex align-items-center py-2"><i class="bi bi-clock-history me-2"></i> Order History</a></li>
+                <li><a href="#" class="d-flex align-items-center py-2"><i class="bi bi-geo-alt me-2"></i> Location</a></li>
+                <li><a href="account.html" class="d-flex align-items-center py-2"><i class="bi bi-box-arrow-in-right me-2"></i> Login / Signup</a></li>
+            </ul>
+
+            <hr>
+
+            <ul class="list-unstyled">
+                <li><a href="#" class="d-flex align-items-center py-2"><i class="bi bi-telephone me-2"></i> Contact Us</a></li>
+                <li><a href="mailto:info@marketcircle.com" class="d-flex align-items-center py-2"><i class="bi bi-envelope me-2"></i> info@marketcircle.com</a></li>
+                <li><a href="#" class="d-flex align-items-center py-2"><i class="bi bi-chat-dots me-2"></i> Live Chat</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="d-lg-none bg-white px-3 py-2 shadow-sm">
+        <form action="" class="d-flex position-relative">
+            <input type="search" class="form-control pe-5" placeholder="Search products...">
+            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+        </form>
+    </div>
+
+    <nav class="navbar navbar-light bg-light fixed-bottom d-lg-none justify-content-around">
+        <a href="#" class="nav-link text-center">
+            <i class="bi bi-grid"></i><br><small>Categories</small>
+        </a>
+        <a href="#" class="nav-link text-center">
+            <i class="bi bi-cart"></i><br><small>Cart</small>
+        </a>
+        <a href="#" class="nav-link text-center">
+            <i class="bi bi-credit-card"></i><br><small>Checkout</small>
+        </a>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-lg-6 col-12 mb-4 mb-md-0">
+                        <h1 class="fw-bold fs-3 fs-md-2 display-5">Groceries delivered fresh, fast, and right to your doorstep.</h1>
+                        <p class="text-muted mt-3">Discover farm-fresh fruits and veggies, dairy, and pantry staples. Order in
+                            minutes, enjoy the convenience of same-day delivery.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 my-3">
+                            <span class="badge rounded-pill bg-light shadow-sm px-3 text-muted py-2">Over 2000+ products</span>
+                            <span class="badge rounded-pill bg-light shadow-sm px-3 text-muted py-2">Same-day delivery in select areas</span>
+                            <span class="badge rounded-pill bg-light shadow-sm px-3 text-muted py-2">Source from local partners</span>
+                        </div>
+                        <a href="#" class="btn btn-success btn-lg mt-2"> <i class="bi bi-bag-check-fill mb-2"></i> Shop Now</a>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-12 text-center">
+                        <img src="images/hero.png" class="img-fluid rounded" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="">
+                        <h3 class="fw-bold">Featured Categories</h3>
+                        <p class="text-muted categories">Explore popular picks to get started</p>
+                    </div>
+                    <div class="">
+                        <a href="#" class="text-success text-decoration-none">View all categories</a>
+                    </div>
+                    
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card category-card">
+                            <img src="images/f&V.jpg" alt="fruits and veggies" class="card-img-top">
+                            <div class="card-body">
+                                <h5>Fruits & Vegetables</h5>
+                                <a href="#" class="text-success">Shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card category-card">
+                            <img src="images/Dairy-Products.webp" alt="dairy" class="card-img-top">
+                            <div class="card-body">
+                                <h5>Dairy</h5>
+                                <a href="#" class="text-success">Shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card category-card">
+                            <img src="images/pantry.jpg" alt="pantry staples" class="card-img-top">
+                            <div class="card-body">
+                                <h5>Pantry Staples</h5>
+                                <a href="#" class="text-success">Shop</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 process">
+            <div class="container">
+                <h3 class="fw-bold">How it works</h3>
+                <p class="text-muted categories">Simple steps to get your groceries</p>
+                <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                        <div class="rounded bg-light shadow-sm p-4 h-100 text-center">
+                            <h5> <i class="bi bi-search text-success fs-2 mb-3"></i> Browse and add to cart</h5>
+                            <p class="text-muted">Find your favorites from fresh produce to pantry staples. Add items to your
+                                cart in a tap.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="rounded bg-light shadow-sm p-4 h-100 text-center">
+                            <h5> <i class="bi bi-shield-lock-fill text-success fs-2 mb-3"></i> Secure checkout</h5>
+                            <p class="text-muted">Choose delivery area, delivery time, and pay securely with 
+                                mutiple options.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="rounded bg-light shadow-sm p-4 h-100 text-center">
+                            <h5> <i class="bi bi-truck text-success fs-2 mb-3"></i> Delivered fresh</h5>
+                            <p class="text-muted">Sit back while we deliver fresh groceries to your
+                                doorstep, same-day under 60 minutes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-5 reviews">
+            <div class="container">
+                <h3 class="fw-bold">What our customers say</h3>
+                <p class="text-muted categories">Real reviews from happy shoppers</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card p-3 shadow-sm">
+                            <div class="mb-2 text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>&#8220; Super convenient and the produce is always fresh. I love the quick delivery windows! &#8221;</p>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="images/customer1.jpg" class="img-fluid rounded-circle fixed" alt="customer1">
+                                <h6 class="fw-bold mb-0">Emma Stone</h6> 
+                            </div>
+                            <small class="text-muted">Verified Buyer</small> 
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 shadow-sm">
+                            <div class="mb-2 text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>&#8220; Great selection and easy checkout. The dairy items are family favorites! &#8221;</p>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="images/customer1.jpg" class="img-fluid rounded-circle fixed" alt="customer1">
+                                <h6 class="fw-bold mb-0">Liam Patel</h6>
+                            </div>
+                            <small class="text-muted">Weekly Customer</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 shadow-sm">
+                            <div class="mb-2 text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>&#8220; Fast delivery and everything arrives chilled and fresh. Highly recommed! &#8221;</p>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="images/customer1.jpg" class="img-fluid rounded-circle fixed" alt="customer1">
+                                <h6 class="fw-bold mb-0">Sophia Nguyen</h6>
+                            </div>
+                            <small class="text-muted">Foodie & Home Cook</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="fw-bold text-white mb-3">Ready to fill your basket?</h3>
+                        <p>Join thousand of happy customer getting groceries delivered with ease.</p>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="btn btn-success btn-lg">Start Shopping</a>
+                            <a href="#" class="btn text-success bg-white btn-lg">Create an Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6 text-center text-md-start">
+                        <h5>Market Circle</h5>
+                        <form action="" class="d-flex mt-2 gap-2">
+                            <input type="email" class="form-control" placeholder="Subscribe for weekly deals">
+                            <button class="btn btn-success">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="col-md-2 text-center text-md-start">
+                        <h6>Shop</h6>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="text-muted">All Products</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">New Arrivals</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Best Sellers</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Top Categories</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Deals</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 text-center text-md-start">
+                        <h6>Company</h6>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="text-muted">About Us</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Careers</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Terms & Conditions</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Privacy Policy</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">FAQ's</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 text-center text-md-start">
+                        <h6>Support</h6>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="text-muted">Contact</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Help Center</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Shipping</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center text-md-start d-flex justify-content-between align-items-center mt-4">
+                    <small class="text-muted">&copy; 2025 Market Circle. All rights reserved.</small>
+                    <div class="mt-3">
+                        <a href="#" class="text-muted me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-facebook fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div id="uc-toast" class="uc-toast hidden">
+        <div class="uc-content">
+            <span class="uc-icon"></span>
+        </div>
+        <div class="">
+            <strong>Page Under Construsction</strong>
+            <p>We're working hard to make this available soon.</p>
+        </div>
+        <button class="uc-close">&times;</button>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lobster&family=Story+Script&display=swap" 
+    rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Account Dashboard - Market Circle</title>
+  </head>
+  <body class="bg-light">
+
+    <nav class="navbar navbar-light bg-white shadow-sm sticky-top">
+        <div class="container px-3 d-flex align-items-center">
+
+            <a href="index.html" class="navbar-brand fw-bold text-success"> <i class="bi bi-cart3"></i> MC</a>
+
+            <form class="d-none d-lg-flex flex-grow-1 mx-4 position-relative">
+                <input type="search" class="form-control pe-5" placeholder="Search product...">
+                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+            </form>
+            
+            <div class="d-flex ms-auto align-items-center">
+                <a href="dashboard.html" class="nav-link account fs-4 me-2" title="Account"><i class="bi bi-person-circle"></i></a>
+                <a href="#" data-status="pending" class="nav-link d-none d-lg-inline fs-4 me-2"><i class="bi bi-heart"></i></a>
+                <a href="#" data-status="pending" class="nav-link d-none d-lg-inline cart fs-4"><i class="bi bi-cart"></i></a>
+            </div> 
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 col-lg-2 bg-white border-end vh-100 p-3">
+                <h5 class="fw-bold text-success text-center mb-4">Account</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link active"><i class="bi bi-grid me-2"></i> Dashboard</a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-box-seam me-2"></i> My Orders</a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-geo-alt me-2"></i> Address</a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-credit-card me-2"></i> Payment Methods</a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-gear me-2"></i> Profile Settings</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link text-danger"><i class="bi bi-box-arrow-in-right me-2"></i> Logout</a></li>
+                </ul>
+            </aside>
+
+            <main class="col-md-9 col-lg-10 p-4">
+                <h3 class="fw-bold">Dashboard</h3>
+                <p class="text-muted">Welcome back, </p>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <h6 class="text-muted">Active Orders</h6>
+                            <h3 class="fw-bold">2</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <h6 class="text-muted">Past Orders</h6>
+                            <h3 class="fw-bold">14</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <h6 class="text-muted">Rewards Balance</h6>
+                            <h3 class="fw-bold text-success">36</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white fw-bold">My Orders</div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+                            <div>
+                                <strong>#100234</strong> - Weekly Essentials ( 3 items )
+                                <br><small class="text-muted">Placed Sep 21, 2025</small>
+                            </div>
+                            <span class="badge bg-success">Delivered</span>
+                            <span>42.80</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+                            <div>
+                                <strong>#100234</strong> - Weekly Essentials ( 3 items )
+                                <br><small class="text-muted">Placed Sep 21, 2025</small>
+                            </div>
+                            <span class="badge bg-success">Delivered</span>
+                            <span>42.80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white fw-bold">Address</div>
+                    <div class="card-body">
+                        <p><strong>Home:</strong></p>
+                        <p><strong>Work:</strong></p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white fw-bold">Payment Methods</div>
+                    <div class="card-body">
+                        <p>Visa</p>
+                        <p>Mastercard</p>
+                        <p>Mobile Money</p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white fw-bold">Profile Settting</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" value="Bright">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" value="Bright">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" value="Bright">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" value="Bright">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Preferred Delivery Notes</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-success mt-3">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+    <script type="module" src="./src/index.ts"></script>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 export function setupUnderConstruction() {
-    const toast = document.getElementById("uc-toast")!;
+    const toast = document.getElementById("uc-toast");
+    if(!toast) return;
     const closeBtn = toast.querySelector<HTMLButtonElement>(".uc-close");
 
     document.querySelectorAll<HTMLAnchorElement>('a[data-status="pending"]').forEach(link => {

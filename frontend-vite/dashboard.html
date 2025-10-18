@@ -32,129 +32,152 @@
             </form>
             
             <div class="d-flex ms-auto align-items-center">
-                <a href="dashboard.html" class="nav-link account fs-4 me-2" title="Account"><i class="bi bi-person-circle"></i></a>
-                <a href="#" data-status="pending" class="nav-link d-none d-lg-inline fs-4 me-2"><i class="bi bi-heart"></i></a>
-                <a href="#" data-status="pending" class="nav-link d-none d-lg-inline cart fs-4"><i class="bi bi-cart"></i></a>
+                <a href="#" data-status="pending" class="nav-link shop me-3" title="Shop"><i class="bi bi-bag-check fs-4"></i><span class="d-none d-lg-inline"> Shop</span></a>
+                <a href="#" data-status="pending" class="nav-link cart me-3" title="Cart"><i class="bi bi-cart fs-4"></i><span class="d-none d-lg-inline"> Cart</span></a>
+                <a href="dashboard.html" class="nav-link account" title="Account"><i class="bi bi-person-circle fs-4"></i><span class="d-none d-lg-inline"> Account</span></a>
             </div> 
         </div>
     </nav>
 
     <div class="container-fluid">
-        <div class="row">
-            <aside class="col-md-3 col-lg-2 bg-white border-end vh-100 p-3">
-                <h5 class="fw-bold text-success text-center mb-4">Account</h5>
+        <div class="d-flex flex-column flex-md-row" id="layoutWrapper">
+            <aside id="sideBar" class="sidebar col-md-3 col-lg-2 bg-white border-end vh-100 p-3">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h5 class="fw-bold text-success mb-0 sidebar-title">Account</h5>
+                    <button id="toggleSidebar" class="btn btn-light btn-sm d-none d-md-inline"><i class="bi bi-list"></i></button>
+                </div>
+            
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a href="dashboard.html" class="nav-link active"><i class="bi bi-grid me-2"></i> Dashboard</a></li>
-                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-box-seam me-2"></i> My Orders</a></li>
-                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-geo-alt me-2"></i> Address</a></li>
-                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-credit-card me-2"></i> Payment Methods</a></li>
-                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link"><i class="bi bi-gear me-2"></i> Profile Settings</a></li>
-                    <li class="nav-item"><a href="index.html" class="nav-link text-danger"><i class="bi bi-box-arrow-in-right me-2"></i> Logout</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link active d-flex align-items-center"><i class="bi bi-grid me-2 fs-5"></i><span class="link-text"> Dashboard</span></a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link d-flex align-items-center"><i class="bi bi-box-seam me-2"></i><span class="link-text"> My Orders</span></a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link d-flex align-items-center"><i class="bi bi-geo-alt me-2"></i><span class="link-text"> Address</span></a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link d-flex align-items-center"><i class="bi bi-credit-card me-2"></i><span class="link-text"> Payment Methods</span></a></li>
+                    <li class="nav-item"><a href="#" data-status="pending" class="nav-link d-flex align-items-center"><i class="bi bi-gear me-2"></i><span class="link-text"> Profile Settings</span></a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link text-danger d-flex align-items-center"><i class="bi bi-box-arrow-in-right me-2"></i><span class="link-text"> Logout</span></a></li>
                 </ul>
             </aside>
 
-            <main class="col-md-9 col-lg-10 p-4">
-                <h3 class="fw-bold">Dashboard</h3>
-                <p class="text-muted">Welcome back, </p>
-
-                <div class="row g-3 mb-4">
-                    <div class="col-md-4">
-                        <div class="card shadow-sm p-3">
-                            <h6 class="text-muted">Active Orders</h6>
-                            <h3 class="fw-bold">2</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm p-3">
-                            <h6 class="text-muted">Past Orders</h6>
-                            <h3 class="fw-bold">14</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm p-3">
-                            <h6 class="text-muted">Rewards Balance</h6>
-                            <h3 class="fw-bold text-success">36</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-white fw-bold">My Orders</div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+            <main class="flex-grow-1 p-3 p-md-4">
+                <section class="dashboard mb-3">
+                    <div class="card shadow-sm border-0 p-3">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap">
                             <div>
-                                <strong>#100234</strong> - Weekly Essentials ( 3 items )
-                                <br><small class="text-muted">Placed Sep 21, 2025</small>
+                                <h5 class="card-title fw-bold">Dashboard</h5>
+                                <p class="text-muted">Welcome back, here's your account overview and quick action</p>
                             </div>
-                            <span class="badge bg-success">Delivered</span>
-                            <span>42.80</span>
+                            <img src="" alt="user" class="rounded-circle me-3" width="80" height="80">
                         </div>
-                        <div class="d-flex justify-content-between align-items-center border-bottom py-2">
-                            <div>
-                                <strong>#100234</strong> - Weekly Essentials ( 3 items )
-                                <br><small class="text-muted">Placed Sep 21, 2025</small>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-4">
+                                <div class="card dashboard-card shadow-sm border-0 p-3 d-flex">
+                                    <i class="bi bi-box-seam me-2"></i>
+                                    <div>
+                                        <h4 class="fw-bold mb-1"></h4>
+                                        <h6 class="text-muted mb-0">Active Orders</h6>  
+                                    </div>
+                                </div>
                             </div>
-                            <span class="badge bg-success">Delivered</span>
-                            <span>42.80</span>
+                            <div class="col-md-4">
+                                <div class="card  dashboard-card shadow-sm border-0 p-3 d-flex">
+                                    <i class="bi bi-clock me-2"></i>
+                                    <div>
+                                        <h4 class="fw-bold mb-1"></h4>
+                                        <h6 class="text-muted mb-0">Past Orders</h6>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card dashboard-card  shadow-sm border-0 p-3 d-flex">
+                                    <i class="bi bi-star me-2"></i>
+                                    <div>
+                                        <h4 class="fw-bold mb-1"></h4>
+                                        <h6 class="text-muted mb-0">Reward Balance</h6>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h6 class="text-muted mb-3">Quick Actions</h6>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="#" class="btn btn-sm btn-success d-flex align-items-center">
+                                    <i class="bi bi-bag me-2"> </i> Reorder last
+                                </a>
+                                <a href="#" class="btn btn-sm btn-success d-flex align-items-center">
+                                    <i class="bi bi-geo-alt me-2"> </i> Manage Address
+                                </a>
+                                <a href="#" class="btn btn-sm btn-success d-flex align-items-center">
+                                    <i class="bi bi-credit-card me-2"> </i> Payment Options
+                                </a>
+                                <a href="#" class="btn btn-sm btn-success d-flex align-items-center">
+                                    <i class="bi bi-person-gear me-2"> </i> Edit Profile
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-white fw-bold">Address</div>
-                    <div class="card-body">
-                        <p><strong>Home:</strong></p>
-                        <p><strong>Work:</strong></p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-white fw-bold">Payment Methods</div>
-                    <div class="card-body">
-                        <p>Visa</p>
-                        <p>Mastercard</p>
-                        <p>Mobile Money</p>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-white fw-bold">Profile Settting</div>
-                    <div class="card-body">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" value="Bright">
+                </section>
+                <section class="my-orders mb-4">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="card shadow-sm border-0 p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="fw-bold mb-0">My Orders</h5>
+                                    <a href="#" class="btn btn-sm text-success">View All</a>
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" value="Bright">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" value="Bright">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" value="Bright">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Preferred Delivery Notes</label>
-                                    <textarea class="form-control"></textarea>
+                                <div id="orderContainer" class="order-container">
+                                       
                                 </div>
                             </div>
-                            <button class="btn btn-success mt-3">Save Changes</button>
-                        </form>
+                        </div>
+                    </div> 
+                </section>
+                <section class="addresses mb-4">
+                    <div class="card shadow-sm border-0 p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="fw-bold mb-0">Addresses</h5>
+                            <button id="useLocationBtn" class="btn btn-success btn-sm d-flex align-items center">
+                                <i class="bi bi-geo-alt me-2"></i> Use Current Location
+                            </button>
+                        </div>
+                        <div id="addressList">
+                            <p class="text-muted text-center py-3 mb-0">Loading your saved addresses...</p>
+                        </div>
                     </div>
-                </div>
+                </section>
             </main>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div id="uc-toast" class="uc-toast hidden">
+            <div class="uc-content text-center">
+                <div class="loader">
+                    <div class="square" id="sq1"></div>
+                    <div class="square" id="sq2"></div>
+                    <div class="square" id="sq3"></div>
+                    <div class="square" id="sq4"></div>
+                    <div class="square" id="sq5"></div>
+                    <div class="square" id="sq6"></div>
+                    <div class="square" id="sq7"></div>
+                    <div class="square" id="sq8"></div>
+                    <div class="square" id="sq9"></div>
+                </div>
+            </div>
+            <div class="">
+                <strong class="d-block mt-3">Page Under Construsction</strong>
+                <p>We're working hard to make this available soon.</p>
+            </div>
+            <button class="uc-close">&times;</button>
         </div>
     </div>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  
     <script type="module" src="./src/index.ts"></script>
   </body>
 </html>

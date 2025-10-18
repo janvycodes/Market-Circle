@@ -343,6 +343,126 @@ footer .bi:hover{
     background-color: #198754;
 }
 
+.sidebar{
+    width: 240px;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+}
+
+.sidebar.collapsed{
+    width: 80px;
+}
+
+.sidebar .nav-link{
+    color: #333;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    transition: all .2s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active,
+.dashboard-card {
+    color: #198754;
+    background-color: rgba(24, 155, 94, 0.05);
+}
+
+.sidebar .link-text{
+    white-space: nowrap;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar.collapsed .link-text{
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+}
+
+.sidebar-title{
+    transition: opacity 0.2s ease;
+}
+
+.sidebar.collapsed .sidebar-title{
+    opacity: 0;
+}
+
+.sidebar.collapsed:hover{
+    width: 240px;
+}
+
+.sidebar.collapsed:hover, .link-text,
+.sidebar.collapsed:hover, .sidebar-title{
+    opacity: 1;
+    transform: none;
+}
+
+.my-orders .card{
+    border-radius: 12px;
+
+}
+
+.order-container .order-card {
+    border: 1px solid #29a96d;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.order-container .order-card:hover{
+    background-color: #f8f9fa;
+}
+
+.order-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.order-id{
+    font-weight: 600;
+}
+
+.order-status{
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.order-actions {
+    margin-top: 0.75rem;
+}
+
+.order-actions .btn {
+    margin-right: 0.5rem;
+}
+
+.addresses .card{
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.addresses-card{
+    border: 1px solid #29a96d;
+    border-radius: 8px;
+    padding: 0.95rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.addresses-card:hover {
+    background-color: #f8f9fa;
+}
+
+.addresses-card h6{
+    font-weight: 600;
+}
+.addresses-card .btn{
+    font-size: 0.8rem;
+}
+
 @media screen and (max-width: 600px) {
     body {
         margin-bottom: 3rem;
@@ -360,5 +480,18 @@ footer .bi:hover{
     .auth-card {
         max-width: 95%;
         padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .sidebar{
+        position: fixed;
+        left: -240px;
+        top: 0;
+        height: 100%;
+        z-index: 1050;
+    }
+    .sidebar.show{
+        left: 0;
     }
 }

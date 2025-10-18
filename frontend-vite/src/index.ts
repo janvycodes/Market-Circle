@@ -1,6 +1,7 @@
 import { setupFroms } from "./account";
 import { setupNavbar } from "./navberUpdates";
 import { setupUnderConstruction } from "./message";
+import { accountDashboard } from "./dashboard";
 
 
 
@@ -21,3 +22,4 @@ document.querySelectorAll(".animate-on-scroll").forEach((el) => {
 setupFroms();
 setupNavbar();
 setupUnderConstruction();
+accountDashboard();
